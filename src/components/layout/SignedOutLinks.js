@@ -6,7 +6,7 @@ const SignedOutLinks = () => {
       <a href="/signup" className="button is-primary">
         <strong>Sign Up</strong>
       </a>
-      <a href="/login" class="button is-light">
+      <a href="/signin" className="button is-light">
         Log in
       </a>
     </div>

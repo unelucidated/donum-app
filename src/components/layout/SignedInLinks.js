@@ -6,6 +6,7 @@ const SignedInLinks = (props) => {
     <div className="container">
       <NavLink to="/create" className="button has-text-grey">New Listing</NavLink>
       <button className="button">Log Out</button>
+      <NavLink to="/profile" className="button has-text-grey">Profile</NavLink>
     </div>
   );
 };
