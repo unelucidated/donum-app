@@ -9,7 +9,7 @@ const Navbar = () => {
         <a href="/" className="navbar-item">
           <img src="" alt="" />
         </a>
-        <a
+        {/* <a
           role="button"
           className="navbar-burger burger"
           aria-label="menu"
@@ -19,7 +19,7 @@ const Navbar = () => {
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
-        </a>
+        </a> */}
       </div>
       <div className="navbar-menu">
         <div className="navbar-start">

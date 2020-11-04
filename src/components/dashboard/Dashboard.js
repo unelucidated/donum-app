@@ -5,25 +5,11 @@ import React from "react";
 import ListingList from "../listings/ListingList";
 
 const Dashboard = () => {
-  const listings = [
-    {
-      id: 0,
-      itemName: "Dog food",
-      categories: ["food", "animal"],
-      description: "food for my doggies",
-    },
-    {
-      id: 1,
-      itemName: "Cat food",
-      categories: ["food", "scum"],
-      description: "food for my kitties",
-    },
-  ];
-  return (
+    return (
     <div className="dashboard container">
       <div className="columns">
         <div className="column is-half">
-          <ListingList listings={listings} />
+          <ListingList />
         </div>
       </div>
     </div>

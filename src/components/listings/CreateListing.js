@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 
+import axios from 'axios';
+
 class CreateListing extends Component {
   state = {
-    images: [],
     itemName: "",
     categories: [],
     description: "",
@@ -17,6 +18,13 @@ class CreateListing extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log(this.state);
+    axios.post('http://localhost:5000/listings', this.state)
+    .then( res => {
+      console.log(res);
+    })
+    .catch( error => {
+      console.log(error);
+    })
   };
 
   render() {
@@ -26,7 +34,7 @@ class CreateListing extends Component {
           <div className="columns">
             {/* left */}
             <div className="column is-half">
-              <div class="box mr-3">
+              <div className="box mr-3">
                 <div className="container has-background-primary-light has-text-grey has-text-centered py-2">
                   <div className="container pt-3">
                     <h1>Icon</h1>
@@ -50,6 +58,7 @@ class CreateListing extends Component {
                     className="input"
                     placeholder="Washing machine"
                     id="itemName"
+                    onChange={this.handleChange}
                   />
                 </div>
               </div>
@@ -61,21 +70,22 @@ class CreateListing extends Component {
                     className="input"
                     placeholder="Electronics, Furniture"
                     id="categories"
+                    onChange={this.handleChange}
                   />
                 </div>
               </div>
-              <div class="field">
-                <label class="label">Description</label>
-                <div class="control">
-                  <textarea class="textarea" placeholder="Textarea" id="description"></textarea>
+              <div className="field">
+                <label className="label">Description</label>
+                <div className="control">
+                  <textarea className="textarea" placeholder="Textarea" id="description" onChange={this.handleChange}></textarea>
                 </div>
               </div>
-              <div class="field is-grouped">
-                <div class="control">
-                  <button class="button is-link">Submit</button>
+              <div className="field is-grouped">
+                <div className="control">
+                  <button className="button is-link" onClick={this.handleSubmit}>Submit</button>
                 </div>
-                <div class="control">
-                  <button class="button is-link is-light">Cancel</button>
+                <div className="control">
+                  <button className="button is-link is-light">Cancel</button>
                 </div>
               </div>
             </div>
